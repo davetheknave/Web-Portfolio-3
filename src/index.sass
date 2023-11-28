@@ -58,6 +58,7 @@ a
   padding: 12px
   $size: 180px
   cursor: pointer
+  height: auto
   &:hover
     background-color: $background-highlight
   .entry-title
@@ -76,14 +77,17 @@ a
       display: flex
       justify-content: space-between
   .entry-expandable
-    display: none
+    max-height: 0
+    transition: max-height 0.15s ease-out
+    overflow-y: hidden 
     .entry-links
       display: inline-flex
       flex-direction: column
       align-items: start
       gap: 0.25em
   .entry-expandable.entry-expanded
-    display: block
+    max-height: 100em
+    transition: max-height 0.15s ease-in
   
 
 :root
