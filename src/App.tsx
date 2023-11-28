@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import { data } from './Data.tsx'
+import { data as dataFetcher } from './Data.tsx'
 
 function Entry(props: any) {
-  const [open, setOpen] = useState(false)
   return (
-    <div onClick={() => { setOpen(!open) }} className="entry">
+    <div onClick={() => { props.click() }} className="entry">
       <div className="entry-title">
         {props.image ? (<img className="entry-title-image" src={props.image}></img>) : null}
         <div className="entry-title-text">
@@ -13,7 +12,7 @@ function Entry(props: any) {
           <p>{props.subtitle}</p>
         </div>
       </div>
-      <div className={"entry-expandable" + (open ? " entry-expanded" : "")}>
+      <div className={"entry-expandable" + (props.open ? " entry-expanded" : "")}>
         <p>
           {props.children}
         </p>
@@ -27,6 +26,13 @@ function Entry(props: any) {
 }
 
 function App() {
+  const [data, setData] = useState(dataFetcher());
+  const [open, setOpen] = useState<Boolean[]>([]);
+  function closeAll(i: number) {
+    let newArray = new Array(data.length).fill(false);
+    newArray[i] = !open[i];
+    setOpen(newArray);
+  }
   return (
     <>
       <header>
@@ -39,17 +45,20 @@ function App() {
         </div>
       </header>
       <div id="page">
-        {data().map((d) => (
+        {data.map((d, i) => (
           <Entry
+            key={i}
             title={d.name}
             year={d.year}
             subtitle={d.oneline}
             platforms={d.platforms}
             image={d.thumbnail}
-            links={d.links.map((a)=>(<a href={a.link}>{a.title}</a>))}
+            links={d.links.map((a) => (<a href={a.link}>{a.title}</a>))}
+            open={open[i]}
+            click={() => closeAll(i)}
           >
             {d.description}
-            </Entry>
+          </Entry>
         ))}
       </div>
     </>
