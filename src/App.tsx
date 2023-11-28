@@ -2,6 +2,19 @@ import { useState } from 'react'
 import './App.css'
 import { data as dataFetcher } from './Data.tsx'
 
+function Tag(props: any){
+  const replacements = {
+    "mac": "macOS",
+    "windows": "Windows",
+    "linux": "Linux",
+    "web": "Web"
+  }
+  const text = replacements[props.children as keyof typeof replacements] || props.children
+  return (
+    <span className="tag">{text}</span>
+  )
+}
+
 function Entry(props: any) {
   return (
     <div onClick={() => { props.click() }} className={"entry" + (props.open ? " entry-expanded" : "")}>
@@ -21,8 +34,16 @@ function Entry(props: any) {
             (<img src={i}></img>)
           )}
         </div>
-        {props.platforms !== undefined ? (<h3>Platforms</h3>) : ""}
-        <p>{props.platforms}</p>
+        {props.platforms !== undefined ? (
+          <>
+            <h3>Platforms</h3>
+            <p>
+              {props.platforms.map((p:string) => 
+                (<Tag>{p}</Tag>)
+              )}
+            </p>
+          </>
+        ) : ""}
         {props.links !== undefined && props.links.length > 0 ? (<h3>Links</h3>) : ""}
         <p className="entry-links">{props.links}</p>
       </div>

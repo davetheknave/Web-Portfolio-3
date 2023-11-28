@@ -27,7 +27,8 @@ a
   border-bottom: 1px solid
   &:hover
     color: $accent
-
+h3, h2
+  margin-bottom: 0.25em
 header
   position: fixed
   width: $sidebar
@@ -59,8 +60,14 @@ header
   $size: 500px
   cursor: pointer
   height: auto
-  &:nth-child(2n) .entry-title
-    flex-direction: row-reverse
+  &:nth-child(2n)
+    .entry-title
+      flex-direction: row-reverse
+      .entry-title-name
+        flex-direction: row-reverse
+      .entry-title-subtitle
+        text-align: right
+        float: right
   &:hover
     background-color: $background-highlight
   .entry-title
@@ -74,14 +81,19 @@ header
     .entry-title-text
       display: block
       width: 100%
+    .entry-title-subtitle
+      margin: 0
+      // max-width: 20em
     .entry-title-name
+      margin-top: 0
       display: flex
       justify-content: space-between
   .entry-expandable
     max-height: 0
     transition: max-height 0.15s ease-out
-    overflow-y: hidden 
+    overflow-y: hidden
     .entry-links
+      margin-top: 0
       display: inline-flex
       flex-direction: column
       align-items: start
@@ -92,19 +104,32 @@ header
       gap: 1em
       overflow-x: scroll
   &:not(.entry-expanded)
-    .entry-title-text
-      // position: relative
-      // left: -50%
+    .entry-title-subtitle
+      max-width: 20em
   &.entry-expanded
     @include card
     .entry-title
       flex-direction: column
       img
         max-width: 100%
+      .entry-title-text
+        text-align: center
+        .entry-title-name
+          justify-content: center
+          flex-direction: row
+          gap: 1em
+      .entry-title-subtitle
+        text-align: center
+        float: initial
     .entry-expandable
       max-height: 100em
       transition: max-height 0.15s ease-in
 
+.tag
+  border-radius: 100px
+  padding: 4px 10px
+  margin-right: 0.25em
+  background-color: $accent
 
 :root
   font-family: $body-font, system-ui, Avenir, Helvetica, Arial, sans-serif
@@ -128,3 +153,4 @@ header
     position: initial
     margin: 0
     left: 0
+    padding-top: 1em
