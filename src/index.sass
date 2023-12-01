@@ -1,6 +1,6 @@
-$primary: #eee
-$background: #242424
-$background-highlight: #353535
+$primary: #ddd
+$background: #151515
+$background-highlight: #252525
 // $primary: #222
 // $background: #fbfbfb
 // $background-highlight: #fff
@@ -33,7 +33,7 @@ header
   position: fixed
   width: $sidebar
   top: 25vh
-  text-align: right
+  text-align: center
   padding: 0
   margin-left: 2em
   padding-right: 1em
@@ -131,6 +131,14 @@ header
   margin-right: 0.25em
   background-color: $accent
 
+.embla
+  overflow: hidden
+.embla__container
+  display: flex
+.embla__slide
+  flex: 0 0 100%
+  min-width: 0
+
 :root
   font-family: $body-font, system-ui, Avenir, Helvetica, Arial, sans-serif
   line-height: 1.5
@@ -154,3 +162,29 @@ header
     margin: 0
     left: 0
     padding-top: 1em
+
+@media (max-width: 800px)
+  .entry
+    .entry-title
+      position: relative
+      width: 100%
+      height: 100%
+      .entry-title-image
+        max-width: 100%
+      .entry-title-text
+        display: flex
+        flex-direction: column
+        justify-content: end
+        width: 100%
+        height: 100%
+        background-color: #00000044
+        background: linear-gradient( to bottom, hsla(0, 0%, 100%, 0.25) 0%, hsla(0, 0%, 94.51%, 0.277) 4.8%, hsla(0, 0%, 88.84%, 0.303) 9.3%, hsla(0, 0%, 82.98%, 0.328) 13.6%, hsla(0, 0%, 76.96%, 0.352) 17.8%, hsla(0, 0%, 70.76%, 0.375) 22.1%, hsla(0, 0%, 64.4%, 0.396) 26.7%, hsla(0, 0%, 57.87%, 0.416) 31.6%, hsla(0, 0%, 51.18%, 0.435) 37%, hsla(0, 0%, 44.33%, 0.451) 43.1%, hsla(0, 0%, 37.32%, 0.465) 49.9%, hsla(0, 0%, 30.15%, 0.477) 57.5%, hsla(0, 0%, 22.84%, 0.487) 66.3%, hsla(0, 0%, 15.37%, 0.494) 76.2%, hsla(0, 0%, 7.76%, 0.498) 87.4%, hsla(0, 0%, 0%, 0.5) 100% )
+        position: absolute
+        top: 0
+        left: 0
+        .entry-title-name, .entry-title-subtitle
+          padding-left: 12px
+          padding-right: 12px
+        .entry-title-subtitle
+          max-width: initial
+          padding-bottom: 12px

@@ -15,8 +15,8 @@ export const data = function(){
             year: "2023",
             oneline: "An interactive experience that blends mathematics and art",
             description: "This online garden transforms mathematical beauty into a fun and mesmerizing experience. Centered around the idea of exploration and play, the controls are designed to let curiosity guide the user to explore a variety of animated rose curves.",
-            images: ["DivineLawTitle.png","DivineLawScreenshot.png"],
-            thumbnail: "DivineLawTitle.png",
+            images: ["Screenshot 2023-11-30 at 13.46.51.png", "Screenshot 2023-11-30 at 13.47.00.png", "Screenshot 2023-11-30 at 13.47.40.png", "Screenshot 2023-11-30 at 13.48.59.png", "Screenshot 2023-11-30 at 13.49.43.png", "Screenshot 2023-11-30 at 13.50.31.png", "Screenshot 2023-11-30 at 13.50.47.png", "Screenshot 2023-11-30 at 13.51.08.png", "Screenshot 2023-11-30 at 13.52.42.png", "Screenshot 2023-11-30 at 13.54.27.png", "Screenshot 2023-11-30 at 13.55.44.png", "Screenshot 2023-11-30 at 14.54.55.png"],
+            thumbnail: "Screenshot 2023-11-30 at 13.55.44.png",
             platforms: ["web"],
             links: [
                 {title:"View now", link:"https://davetheknave.github.io/Rose-Curve-Visualizer"},
@@ -32,8 +32,8 @@ export const data = function(){
             - Having a single page without routing allows for everything to be visible at a glance. Details are hidden until the user decides to click on a project.
             - The portfolio is centered around larger images. This is more eye catching and reflects on the visual nature of much of my work.
             - The design is more modern and uses animations to gently guide the user.`,
-            images: ["DivineLawTitle.png","DivineLawScreenshot.png"],
-            thumbnail: "DivineLawTitle.png",
+            images: ["Portfolio3.png",],
+            thumbnail: "Portfolio3.png",
             platforms: ["web"],
             links: [{"title":"Source Code","link":"https://github.com/davetheknave/Web-Portfolio-03"}],
         },
@@ -56,8 +56,8 @@ export const data = function(){
             - The simpler look, while less artistic, was more robust and responsive to work on more devices.
             - The soft colors are easier on the eyes.
             - The header on the left has contact information and serves as a persistent call to action.`,
-            images: ["website2.png","website1.png"],
-            thumbnail: "website2.png",
+            images: ["Portfolio2.png","Portfolio1.png"],
+            thumbnail: "Portfolio2.png",
             platforms: ["web"],
             links: [
                 {title: "Source code for second site", link: "https://github.com/davetheknave/davetheknave.github.io/"},

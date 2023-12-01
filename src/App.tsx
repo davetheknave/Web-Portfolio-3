@@ -1,55 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { data as dataFetcher } from './Data.tsx'
-
-function Tag(props: any){
-  const replacements = {
-    "mac": "macOS",
-    "windows": "Windows",
-    "linux": "Linux",
-    "web": "Web"
-  }
-  const text = replacements[props.children as keyof typeof replacements] || props.children
-  return (
-    <span className="tag">{text}</span>
-  )
-}
-
-function Entry(props: any) {
-  return (
-    <div onClick={() => { props.click() }} className={"entry" + (props.open ? " entry-expanded" : "")}>
-      <div className="entry-title">
-        {props.thumbnail ? (<img className="entry-title-image" src={props.thumbnail}></img>) : null}
-        <div className="entry-title-text">
-          <h2 className="entry-title-name"><span>{props.title}</span><span className="entry-title-year">{props.year}</span></h2>
-          <p className="entry-title-subtitle">{props.subtitle}</p>
-        </div>
-      </div>
-      <div className={"entry-expandable"}>
-        <p>
-          {props.children}
-        </p>
-        <div className="entry-gallery">
-          {props.images.map((i: string) =>
-            (<img src={i}></img>)
-          )}
-        </div>
-        {props.platforms !== undefined ? (
-          <>
-            <h3>Platforms</h3>
-            <p>
-              {props.platforms.map((p:string) => 
-                (<Tag>{p}</Tag>)
-              )}
-            </p>
-          </>
-        ) : ""}
-        {props.links !== undefined && props.links.length > 0 ? (<h3>Links</h3>) : ""}
-        <p className="entry-links">{props.links}</p>
-      </div>
-    </div>
-  )
-}
+import {Entry} from './entry.tsx';
 
 function App() {
   const [data, setData] = useState(dataFetcher());
@@ -80,7 +32,7 @@ function App() {
             platforms={d.platforms}
             thumbnail={d.thumbnail}
             images={d.images}
-            links={d.links.map((a) => (<a href={a.link}>{a.title}</a>))}
+            links={d.links.map((a,ii) => (<a key={ii} href={a.link}>{a.title}</a>))}
             open={open[i]}
             click={() => closeAll(i)}
           >
