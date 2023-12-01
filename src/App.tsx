@@ -33,7 +33,7 @@ function App() {
           </a>
         </div>
       </header>
-      <div id="page" className="absolute top-32 ml-20 grid grid-cols-3 gap-8 left-64">
+      <div id="page" className="absolute top-32 m-20 flex flex-wrap gap-16 left-64 justify-center">
         {data.map((d, i) => (
           <ImageEntry
             key={i}

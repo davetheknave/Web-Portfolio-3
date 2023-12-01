@@ -76,15 +76,16 @@ export function HorizontalEntry(props: any) {
 }
 export function ImageEntry(props: any) {
   return (
-    <div onClick={() => { props.click() }} className="relative">
-      <div>
-        {props.thumbnail ? (<img src={props.thumbnail}></img>) : null}
-        <div className="">
-          <h2><span>{props.title}</span><span>{props.year}</span></h2>
-          <p>{props.subtitle}</p>
+    
+    <div onClick={() => { props.click() }} className="w-5/12 h-80 mb-20">
+      {/* <div> */}
+        {props.thumbnail ? (<img className="h-full w-full object-cover mb-2" src={props.thumbnail}></img>) : null}
+        <div className="flex flex-col justify-end">
+          <h2 className="flex justify-between text-s"><span>{props.title}</span><span>{props.year}</span></h2>
+          <p className="text-sm">{props.subtitle}</p>
         </div>
-      </div>
-      <div className="hidden">
+      {/* </div> */}
+      {/* <div className="hidden">
         <p>
           {props.children}
         </p>
@@ -105,7 +106,7 @@ export function ImageEntry(props: any) {
         ) : ""}
         {props.links !== undefined && props.links.length > 0 ? (<h3>Links</h3>) : ""}
         <p>{props.links}</p>
-      </div>
+      </div> */}
     </div>
   )
 }
