@@ -1,44 +1,6 @@
 import { ReactElement, useState, useCallback } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
+import { EmblaCarousel, Tag } from './widgets'
 
-function EmblaCarousel(props: any) {
-  const [emblaRef, emblaApi] = useEmblaCarousel()
-  const scrollPrev = useCallback(() => { if (emblaApi) emblaApi.scrollPrev() }, [emblaApi])
-  const scrollNext = useCallback(() => { if (emblaApi) emblaApi.scrollNext() }, [emblaApi])
-  const slides = props.children.map((c: ReactElement, i: number) =>
-  (<div key={i} className="entry-gallery embla__slide">
-    {c}
-  </div>)
-  )
-  return (
-    <div className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {slides}
-        </div>
-      </div>
-      <button className="embla__prev" onClick={scrollPrev}>
-        Prev
-      </button>
-      <button className="embla__next" onClick={scrollNext}>
-        Next
-      </button>
-    </div >
-  );
-}
-
-function Tag(props: any) {
-  const replacements = {
-    "mac": "macOS",
-    "windows": "Windows",
-    "linux": "Linux",
-    "web": "Web"
-  }
-  const text = replacements[props.children as keyof typeof replacements] || props.children
-  return (
-    <span className="tag">{text}</span>
-  )
-}
 export function HorizontalEntry(props: any) {
   return (
     <div onClick={() => { props.click() }} className={"horizontal-entry entry" + (props.open ? " entry-expanded" : "")}>
@@ -53,11 +15,13 @@ export function HorizontalEntry(props: any) {
         <p>
           {props.children}
         </p>
+        <div className="h-1">
         <EmblaCarousel>
           {props.images.map((i: string) =>
             (<img src={i}></img>)
           )}
         </EmblaCarousel>
+        </div>
         {props.platforms !== undefined ? (
           <>
             <h3>Platforms</h3>
@@ -76,37 +40,13 @@ export function HorizontalEntry(props: any) {
 }
 export function ImageEntry(props: any) {
   return (
-    
-    <div onClick={() => { props.click() }} className="w-5/12 h-80 mb-20">
-      {/* <div> */}
-        {props.thumbnail ? (<img className="h-full w-full object-cover mb-2" src={props.thumbnail}></img>) : null}
-        <div className="flex flex-col justify-end">
-          <h2 className="flex justify-between text-s"><span>{props.title}</span><span>{props.year}</span></h2>
-          <p className="text-sm">{props.subtitle}</p>
-        </div>
-      {/* </div> */}
-      {/* <div className="hidden">
-        <p>
-          {props.children}
-        </p>
-        <EmblaCarousel>
-          {props.images.map((image: string, i: number) =>
-            (<img key={i} src={image}></img>)
-          )}
-        </EmblaCarousel>
-        {props.platforms !== undefined ? (
-          <>
-            <h3>Platforms</h3>
-            <p>
-              {props.platforms.map((p: string, i: number) =>
-                (<Tag key={i}>{p}</Tag>)
-              )}
-            </p>
-          </>
-        ) : ""}
-        {props.links !== undefined && props.links.length > 0 ? (<h3>Links</h3>) : ""}
-        <p>{props.links}</p>
-      </div> */}
+
+    <div className="w-5/12 h-80 mb-20">
+      {props.thumbnail ? (<img onClick={() => { props.onClick() }}className="h-full w-full object-cover mb-2 cursor-pointer" src={props.thumbnail}></img>) : null}
+      <div className="flex flex-col justify-end">
+        <h2 className="flex justify-between text-s"><span>{props.title}</span><span>{props.year}</span></h2>
+        <p className="text-sm">{props.subtitle}</p>
+      </div>
     </div>
   )
 }

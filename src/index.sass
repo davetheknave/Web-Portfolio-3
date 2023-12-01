@@ -40,6 +40,10 @@ header
 
 #page
   left: $sidebar
+  width: calc(100% - $sidebar)
+
+.page 
+  width: calc(100% - $sidebar)
 
 .horizontal-entry
   padding: 12px
@@ -123,7 +127,12 @@ header
   display: flex
 .embla__slide
   flex: 0 0 100%
-  min-width: 0
+  // min-width: 0
+  display: flex
+  justify-content: center
+  img
+    height: 100%
+
 
 :root
   font-family: $body-font, system-ui, Avenir, Helvetica, Arial, sans-serif
