@@ -22,7 +22,7 @@ export function HorizontalEntry(props: any) {
 }
 export function ImageEntry(props: any) {
   return (
-    <div className="w-5/12 mb-20">
+    <div className="lg:w-5/12 md:mb-20">
       {props.thumbnail ? (
         <img
           className="h-full w-full object-cover mb-2 cursor-pointer"
@@ -31,11 +31,11 @@ export function ImageEntry(props: any) {
         />
       ) : null}
       <div className="flex flex-col justify-end">
-        <h2 className="flex justify-between text-s">
+        <h2 className="flex justify-between">
           <span>{props.title}</span>
           <span>{props.year}</span>
         </h2>
-        <p className="text-sm">{props.subtitle}</p>
+        <p className="">{props.subtitle}</p>
       </div>
     </div>
   )

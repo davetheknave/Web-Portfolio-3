@@ -32,7 +32,7 @@ export function BigView(props: any) {
 
   return (
     <>
-      <div className={"relative top-32 flex flex-col justify-center items-center w-full" + props.className}>
+      <div className={"relative md:top-32 flex flex-col justify-center items-center w-full" + props.className}>
         <div className="max-w-3xl">
           <h2 className="flex justify-between text-2xl w-full">
             <span>
