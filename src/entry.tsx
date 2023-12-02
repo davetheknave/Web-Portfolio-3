@@ -22,7 +22,7 @@ export function HorizontalEntry(props: any) {
 }
 export function ImageEntry(props: any) {
   return (
-    <div className="lg:w-5/12 md:mb-20">
+    <div className="lg:w-5/12 lg:mb-20">
       {props.thumbnail ? (
         <img
           className="h-full w-full object-cover mb-2 cursor-pointer"

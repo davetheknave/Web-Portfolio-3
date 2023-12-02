@@ -15,8 +15,13 @@ export const data = function(){
             year: "2023",
             oneline: "An interactive experience that blends mathematics and art",
             description: "This online garden transforms mathematical beauty into a fun and mesmerizing experience. Centered around the idea of exploration and play, the controls are designed to let curiosity guide the user to explore a variety of animated rose curves.",
-            images: ["Screenshot 2023-11-30 at 13.46.51.png", "Screenshot 2023-11-30 at 13.47.00.png", "Screenshot 2023-11-30 at 13.47.40.png", "Screenshot 2023-11-30 at 13.48.59.png", "Screenshot 2023-11-30 at 13.49.43.png", "Screenshot 2023-11-30 at 13.50.31.png", "Screenshot 2023-11-30 at 13.50.47.png", "Screenshot 2023-11-30 at 13.51.08.png", "Screenshot 2023-11-30 at 13.52.42.png", "Screenshot 2023-11-30 at 13.54.27.png", "Screenshot 2023-11-30 at 13.55.44.png", "Screenshot 2023-11-30 at 14.54.55.png"],
-            thumbnail: "Screenshot 2023-11-30 at 13.55.44.png",
+            images: [
+                "RoseCurveStar.png",
+                "RoseCurveColor.png",
+                "RoseCurveGreen.png",
+                "RoseCurveRound.png",
+            ],
+            thumbnail: "RoseCurveClose.png",
             platforms: ["web"],
             links: [
                 {title:"View now", link:"https://davetheknave.github.io/Rose-Curve-Visualizer"},
@@ -42,7 +47,7 @@ export const data = function(){
             year: "2021",
             oneline: "My and my sister's entry to AI and Games Jam 2021",
             description: `My sister and I had one week to create a video game for the AI and Games Jam of 2021 with the theme of "breaking the rules". We designed and created a puzzle game about an angel that can break the laws of physics. We won 7th place out of over 100 entries.`,
-            images: ["DivineLawTitle.png","DivineLawScreenshot.png"],
+            images: ["DivineLawScreenshot.png"],
             thumbnail: "DivineLawTitle.png",
             platforms: ["windows","mac"],
             links: [{title:"Play now",link:"https://leafyline.itch.io/divine"}],
@@ -57,11 +62,11 @@ export const data = function(){
             - The soft colors are easier on the eyes.
             - The header on the left has contact information and serves as a persistent call to action.`,
             images: ["Portfolio2.png","Portfolio1.png"],
-            thumbnail: "Portfolio2.png",
+            thumbnail: "Portfolio12.png",
             platforms: ["web"],
             links: [
-                {title: "Source code for second site", link: "https://github.com/davetheknave/davetheknave.github.io/"},
-                {title: "Source code for first site", link: "https://github.com/davetheknave/Web-Portfolio-01"},
+                {title: "Source code for portfolio (2021)", link: "https://github.com/davetheknave/davetheknave.github.io/"},
+                {title: "Source code for portfolio (2019)", link: "https://github.com/davetheknave/Web-Portfolio-01"},
             ],
         },
         {
