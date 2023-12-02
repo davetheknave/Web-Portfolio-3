@@ -11,10 +11,13 @@ function App() {
   function open(d: typeof data[0]) {
     setCurrentDataEntry(d);
   }
+  function close(){
+    setCurrentDataEntry({});
+  }
   return (
     <>
       <Header />
-      <div id="page" className="absolute top-40 left-64">
+      <div id="page" className="absolute left-64 p-8">
         <div className={"relative top-32 flex flex-wrap gap-16 justify-center"+("description" in currentDataEntry ? " hidden" : "")}>
           {data.map((d, i) => (
             <ImageEntry
@@ -32,9 +35,9 @@ function App() {
             </ImageEntry>
           ))}
         </div>
-        <BigView className=""
+        <BigView className={("description" in currentDataEntry ? "" : " hidden")}
           data={currentDataEntry}
-          back={()=>setCurrentDataEntry({})}
+          back={close}
         />
       </div>
     </>

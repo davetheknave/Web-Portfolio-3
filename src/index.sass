@@ -4,29 +4,24 @@
 $primary: #ddd
 $background: #151515
 $background-highlight: #252525
-// $primary: #222
-// $background: #fbfbfb
-// $background-highlight: #fff
+$primary: #222
+$background: #fbfbfb
+// $background: #DA382E
+$background-highlight: #fff
 $accent: #d65
 $accent2: #d76
 $primary-light: white
-$sidebar: 350px
+$sidebar: 400px
 $title-font: 'Raleway', sans-serif
 $body-font: 'Raleway', sans-serif
-
-@mixin card
-  // border-radius: 4px
-  background-color: $background-highlight
-  box-shadow: 2px 2px 4px #0004
-
-@mixin outline
-  // border-radius: 4px
-  border: 2px solid $primary
 
 h1
   font-size: 38px
 h2
   // font-size: 24px
+  margin-bottom: 0.5rem
+p 
+  margin-bottom: 2rem
 
 a
   &:hover
@@ -46,10 +41,6 @@ header
   width: calc(100% - $sidebar)
 
 .horizontal-entry
-  padding: 12px
-  $size: 500px
-  cursor: pointer
-  height: auto
   &:nth-child(2n)
     .entry-title
       flex-direction: row-reverse
@@ -60,60 +51,6 @@ header
         float: right
   &:hover
     background-color: $background-highlight
-  .entry-title
-    width: 100%
-    display: flex
-    gap: 1em
-    align-items: center
-    img
-      max-height: $size
-      max-width: $size
-    .entry-title-text
-      display: block
-      width: 100%
-    .entry-title-subtitle
-      margin: 0
-      // max-width: 20em
-    .entry-title-name
-      margin-top: 0
-      display: flex
-      justify-content: space-between
-  .entry-expandable
-    max-height: 0
-    transition: max-height 0.15s ease-out
-    overflow-y: hidden
-    .entry-links
-      margin-top: 0
-      display: inline-flex
-      flex-direction: column
-      align-items: flex-start
-      gap: 0.25em
-    .entry-gallery
-      display: flex
-      height: 300px
-      gap: 1em
-      overflow-x: scroll
-  &:not(.entry-expanded)
-    .entry-title-subtitle
-      max-width: 20em
-  &.entry-expanded
-    @include card
-    .entry-title
-      flex-direction: column
-      img
-        max-width: 100%
-      .entry-title-text
-        text-align: center
-        .entry-title-name
-          justify-content: center
-          flex-direction: row
-          gap: 1em
-      .entry-title-subtitle
-        text-align: center
-        float: initial
-    .entry-expandable
-      max-height: 100em
-      transition: max-height 0.15s ease-in
 
 .tag
   border-radius: 100px
@@ -125,6 +62,7 @@ header
   overflow: hidden
 .embla__container
   display: flex
+  max-height: 50vh
 .embla__slide
   flex: 0 0 100%
   // min-width: 0
@@ -132,6 +70,16 @@ header
   justify-content: center
   img
     height: 100%
+.embla__buttons
+  pointer-events: none
+  > *
+    pointer-events: all
+.embla__dot
+  color: $primary
+.embla__dot--selected
+  color: $accent
+
+    
 
 
 :root
