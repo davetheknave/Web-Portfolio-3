@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import { data as dataFetcher } from './Data.tsx'
-import { HorizontalEntry, ImageEntry } from './entry.tsx';
+import { ImageEntry } from './entry.tsx';
 import { BigView } from './bigview.tsx';
 import { Header } from './header.tsx';
 
 function App() {
-  const [data, setData] = useState(dataFetcher());
+  const [data] = useState(dataFetcher());
   const [currentDataEntry, setCurrentDataEntry] = useState({});
   function open(d: typeof data[0]) {
     setCurrentDataEntry(d);

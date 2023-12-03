@@ -1,22 +1,22 @@
-import { EmblaCarousel, Tag } from './widgets'
+import { EmblaCarousel } from './widgets'
 import Markdown from 'react-markdown'
 
 export function BigView(props: any) {
-  const platforms = props.data.platforms !== undefined && props.data.platforms.length > 0 ? (
-    <>
-      <h3>Platforms</h3>
-      <p>
-        {props.data.platforms.map((p: string, i: number) =>
-          (<Tag key={i}>{p}</Tag>)
-        )}
-      </p>
-    </>
-  ) : "";
+  // const platforms = props.data.platforms !== undefined && props.data.platforms.length > 0 ? (
+  //   <>
+  //     <h3>Platforms</h3>
+  //     <p>
+  //       {props.data.platforms.map((p: string, i: number) =>
+  //         (<Tag key={i}>{p}</Tag>)
+  //       )}
+  //     </p>
+  //   </>
+  // ) : "";
 
   const links = props.data.links !== undefined && props.data.links.length > 0 ?
     (
       <>
-        <p className="inline-flex flex-col gap-1 mb-8 underline underline-offset-4">{props.data.links.map((a, i: number) => (<a className="mb-1" key={i} href={a.link}>{a.title}</a>))}</p>
+        <p className="inline-flex flex-col gap-1 mb-8 underline underline-offset-4">{props.data.links.map((a: any, i: number) => (<a className="mb-1" key={i} href={a.link}>{a.title}</a>))}</p>
       </>
     ) : "";
 

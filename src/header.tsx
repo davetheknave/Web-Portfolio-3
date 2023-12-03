@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn as linkedin, faGithub as github } from '@fortawesome/free-brands-svg-icons'
 import { faAt as email } from '@fortawesome/free-solid-svg-icons'
 
-export function Header(props) {
+export function Header(props: any) {
   return (
     <header className="lg:fixed lg:w-96 lg:h-full text-center flex flex-col justify-center mb-8">
       <div className="lg:ml-16 lg:mr-16 m-4">
