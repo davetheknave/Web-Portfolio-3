@@ -15,20 +15,51 @@ $sidebar: 400px
 $title-font: 'Raleway', sans-serif
 $body-font: 'Raleway', sans-serif
 
+:root
+  font-family: $body-font, system-ui, Avenir, Helvetica, Arial, sans-serif
+  font-size: 16pt
+  line-height: 1.5
+  // font-weight: 400
+
+  background-color: $background
+  color: $primary
+
+  font-synthesis: none
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+/* General */
+
 h1
   font-size: 38px
 h2
   // font-size: 24px
   // margin-bottom: 0.5rem
-p 
+p
   margin-bottom: 1rem
+a
+  text-decoration: underline
+  text-underline-offset: 4px
+  cursor: pointer
+  text-decoration-thickness: 1px
+  &:hover
+    color: $accent
+
+/* Utilities */
+
+.soft-gradient
+  background-color: #00000044
+  background: linear-gradient( to bottom, hsla(0, 0%, 100%, 0.25) 0%, hsla(0, 0%, 94.51%, 0.277) 4.8%, hsla(0, 0%, 88.84%, 0.303) 9.3%, hsla(0, 0%, 82.98%, 0.328) 13.6%, hsla(0, 0%, 76.96%, 0.352) 17.8%, hsla(0, 0%, 70.76%, 0.375) 22.1%, hsla(0, 0%, 64.4%, 0.396) 26.7%, hsla(0, 0%, 57.87%, 0.416) 31.6%, hsla(0, 0%, 51.18%, 0.435) 37%, hsla(0, 0%, 44.33%, 0.451) 43.1%, hsla(0, 0%, 37.32%, 0.465) 49.9%, hsla(0, 0%, 30.15%, 0.477) 57.5%, hsla(0, 0%, 22.84%, 0.487) 66.3%, hsla(0, 0%, 15.37%, 0.494) 76.2%, hsla(0, 0%, 7.76%, 0.498) 87.4%, hsla(0, 0%, 0%, 0.5) 100% )
+
+/* Page specific */
 
 .description-markdown
   margin-bottom: 1rem
   ul
     list-style-type: circle
 
-#gallery img 
+#gallery img
   max-height: 70vh
 
 header
@@ -45,14 +76,6 @@ header h1 a
   text-decoration: none
   &:hover
     color: inherit
-
-a
-  &:hover
-    color: $accent
-  text-decoration: underline
-  text-underline-offset: 4px
-  cursor: pointer
-  text-decoration-thickness: 1px
 
 #page
   left: $sidebar
@@ -107,25 +130,4 @@ a
   width: 16px
   height: 16px
   border-radius: 100%
-
-    
-
-
-:root
-  font-family: $body-font, system-ui, Avenir, Helvetica, Arial, sans-serif
-  font-size: 16pt
-  line-height: 1.5
-  // font-weight: 400
-
-  background-color: $background
-  color: $primary
-
-  font-synthesis: none
-  text-rendering: optimizeLegibility
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-
-.soft-gradient
-  background-color: #00000044
-  background: linear-gradient( to bottom, hsla(0, 0%, 100%, 0.25) 0%, hsla(0, 0%, 94.51%, 0.277) 4.8%, hsla(0, 0%, 88.84%, 0.303) 9.3%, hsla(0, 0%, 82.98%, 0.328) 13.6%, hsla(0, 0%, 76.96%, 0.352) 17.8%, hsla(0, 0%, 70.76%, 0.375) 22.1%, hsla(0, 0%, 64.4%, 0.396) 26.7%, hsla(0, 0%, 57.87%, 0.416) 31.6%, hsla(0, 0%, 51.18%, 0.435) 37%, hsla(0, 0%, 44.33%, 0.451) 43.1%, hsla(0, 0%, 37.32%, 0.465) 49.9%, hsla(0, 0%, 30.15%, 0.477) 57.5%, hsla(0, 0%, 22.84%, 0.487) 66.3%, hsla(0, 0%, 15.37%, 0.494) 76.2%, hsla(0, 0%, 7.76%, 0.498) 87.4%, hsla(0, 0%, 0%, 0.5) 100% )
 
