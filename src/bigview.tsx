@@ -17,7 +17,7 @@ export function BigView(props: any) {
   const links = props.data.links !== undefined && props.data.links.length > 0 ?
     (
       <>
-        <p className="inline-flex flex-col gap-1 mb-8 w-1/2 underline underline-offset-4">{props.data.links.map((a, i: number) => (<a className="mb-1" key={i} href={a.link}>{a.title}</a>))}</p>
+        <p className="inline-flex flex-col gap-1 mb-8 underline underline-offset-4">{props.data.links.map((a, i: number) => (<a className="mb-1" key={i} href={a.link}>{a.title}</a>))}</p>
       </>
     ) : "";
 
@@ -32,7 +32,8 @@ export function BigView(props: any) {
 
   return (
     <>
-      <div className={"relative lg:top-16 flex flex-col justify-center items-center w-full" + props.className}>
+      <div className={"relative lg:top-16 flex flex-col justify-center items-center w-full mb-8" + props.className}>
+        <a onClick={props.back} className="underline underline-offset-4">Back</a>
         <div className="max-w-3xl">
           <h2 className="flex justify-between notext-2xl mb-4 w-full">
             <span>
@@ -48,9 +49,9 @@ export function BigView(props: any) {
           {links}
         </div>
           {images}
-        <div className="absolute -bottom-36 flex justify-center w-full text-3xl mb-8">
+        {/* <div className="absolute -bottom-36 flex justify-center w-full text-3xl mb-8">
           <FontAwesomeIcon onClick={props.back} className="cursor-pointer" icon={faXmark} />
-        </div>
+        </div> */}
       </div>
     </>
   );

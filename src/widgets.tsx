@@ -40,14 +40,10 @@ export function EmblaCarousel(props: any) {
           {slides}
         </div>
       </div>
-      <div className="embla__buttons absolute text-7xl bottom-0 h-full w-full flex justify-between items-center">
+      <div className="embla__buttons text-3xl bottom-0 h-full w-full flex justify-between items-center mt-1">
         <button className="embla__prev" onClick={scrollPrev}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
-        <button className="embla__next" onClick={scrollNext}>
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
-      </div>
       <div className="embla__dots flex justify-center gap-2">
         {scrollSnaps.map((_, index) => (
           <button
@@ -59,6 +55,10 @@ export function EmblaCarousel(props: any) {
             )}
           ><FontAwesomeIcon icon={faCircle} /></button>
         ))}
+      </div>
+        <button className="embla__next" onClick={scrollNext}>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
       </div>
     </div>
   );

@@ -36,9 +36,17 @@ header
   header
     gap: 0 !important
 
+header h1 a
+  text-decoration: none
+  &:hover
+    color: inherit
+
 a
   &:hover
     color: $accent
+  text-decoration: underline
+  text-underline-offset: 4px
+  cursor: pointer
 
 #page
   left: $sidebar
