@@ -1,7 +1,7 @@
 import { ReactElement, useState, useCallback, useEffect } from 'react'
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight, faCircle } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 export function EmblaCarousel(props: any) {
   const [emblaRef, emblaApi] = useEmblaCarousel()
@@ -34,28 +34,28 @@ export function EmblaCarousel(props: any) {
     emblaApi.on('select', onSelect)
   }, [emblaApi, onInit, onSelect])
   return (
-    <div className="embla relative">
+    <div className="embla relative flex flex-col items-center">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides}
         </div>
       </div>
-      <div className="embla__buttons text-3xl bottom-0 h-full w-full flex justify-between items-center mt-1">
+      <div className="embla__buttons text-3xl bottom-0 h-full w-full max-w-3xl flex justify-between items-center mt-1">
         <button className="embla__prev" onClick={scrollPrev}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
-      <div className="embla__dots flex justify-center gap-2">
-        {scrollSnaps.map((_, index) => (
-          <button
-            type="button"
-            key={index}
-            onClick={() => scrollTo(index)}
-            className={'embla__dot'.concat(
-              index === selectedIndex ? ' embla__dot--selected' : ''
-            )}
-          ><FontAwesomeIcon icon={faCircle} /></button>
-        ))}
-      </div>
+        <div className="embla__dots flex justify-center gap-2">
+          {scrollSnaps.map((_, index) => (
+            <button
+              type="button"
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={'embla__dot'.concat(
+                index === selectedIndex ? ' embla__dot--selected' : ''
+              )}
+            ><div className="dot-icon" /></button>
+          ))}
+        </div>
         <button className="embla__next" onClick={scrollNext}>
           <FontAwesomeIcon icon={faChevronRight} />
         </button>

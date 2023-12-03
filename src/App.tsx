@@ -17,8 +17,8 @@ function App() {
   return (
     <>
       <Header />
-      <div id="page" className="lg:absolute left-64 p-12 w-full">
-        <div id="gallery" className={"lg:relative w-full top-32 flex flex-col lg:flex-row flex-wrap gap-16 justify-center"+("description" in currentDataEntry ? " hidden" : "")}>
+      <div id="page" className="lg:absolute left-64 pl-12 pr-12 w-full">
+        <div id="gallery" className={"lg:relative w-full top-32 flex flex-col 2xl:flex-row flex-wrap gap-16 justify-center"+("description" in currentDataEntry ? " hidden" : "")}>
           {data.map((d, i) => (
             <ImageEntry
               key={i}

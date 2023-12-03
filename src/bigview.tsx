@@ -24,7 +24,7 @@ export function BigView(props: any) {
   const images = props.data.images !== undefined && props.data.images.length > 0 ? (
     <EmblaCarousel>
       {props.data.images.map((image: string, i: number) =>
-        (<img key={i} src={image} className="object-contain"></img>)
+        (<img key={i} src={image} className="object-scale-down"></img>)
       )}
     </EmblaCarousel>
   ) : "";
@@ -32,7 +32,7 @@ export function BigView(props: any) {
 
   return (
     <>
-      <div className={"relative lg:top-16 flex flex-col justify-center items-center w-full mb-8" + props.className}>
+      <div className={"relative lg:top-12 flex flex-col justify-center items-center w-full mb-8" + props.className}>
         <a onClick={props.back} className="underline underline-offset-4">Back</a>
         <div className="max-w-3xl">
           <h2 className="flex justify-between notext-2xl mb-4 w-full">
