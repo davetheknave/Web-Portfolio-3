@@ -1,6 +1,5 @@
 import { EmblaCarousel, Tag } from './widgets'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import Markdown from 'react-markdown'
 
 export function BigView(props: any) {
   const platforms = props.data.platforms !== undefined && props.data.platforms.length > 0 ? (
@@ -44,7 +43,9 @@ export function BigView(props: any) {
             </span>
           </h2>
           <p className="">
-            {props.data.description}
+            <Markdown>
+              {props.data.description}
+            </Markdown>
           </p>
           {links}
         </div>
