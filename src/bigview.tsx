@@ -42,11 +42,11 @@ export function BigView(props: any) {
               {props.data.year}
             </span>
           </h2>
-          <p className="">
+          <div className="description-markdown">
             <Markdown>
               {props.data.description}
             </Markdown>
-          </p>
+          </div>
           {links}
         </div>
           {images}

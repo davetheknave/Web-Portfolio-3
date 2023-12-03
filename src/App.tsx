@@ -16,7 +16,7 @@ function App() {
   }
   return (
     <>
-      <Header />
+      <Header bio={`I am a designer, developer, and artist. My passion is in creating experiences inspired by the world around me. I am perpetually learning, constantly expanding my skill set, so that I can continue punching above my weight.`} />
       <div id="page" className="lg:absolute left-64 pl-12 pr-12 w-full">
         <div id="gallery" className={"lg:relative w-full top-32 flex flex-col 2xl:flex-row flex-wrap gap-16 justify-center"+("description" in currentDataEntry ? " hidden" : "")}>
           {data.map((d, i) => (

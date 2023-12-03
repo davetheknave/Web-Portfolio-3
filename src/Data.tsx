@@ -37,11 +37,9 @@ Made using p5.js and React.`,
             year: "2023",
             oneline: "You're looking at it!",
             description: `My personal portfolio is designed to give a quick overview of some of the personal projects I've done, with more detailed information being available on GitHub or elsewhere. My latest website is similar to my previous one, but with a few notable improvements showcasing what I've learned:
-
-- It now has a back end to allow me to update it easily.
-- Having a single page without routing allows for everything to be visible at a glance. Details are hidden until the user decides to click on a project.
 - The portfolio is centered around larger images. This is more eye catching and reflects on the visual nature of much of my work.
-- The design is more modern and uses animations to gently guide the user.`,
+- Having everything on a single page without routing allows for everything to be visible at a glance. Details are hidden until the user decides to click on a project.
+- The design is more stylish.`,
             images: ["Portfolio3.png","Portfolio3Mobile.png"],
             thumbnail: "Portfolio3.png",
             platforms: ["web"],
@@ -66,11 +64,11 @@ Made using p5.js and React.`,
             name: "Old portfolio sites",
             year: "",
             oneline: "Previous versions of my portfolio. Kept here for digital archaeologists",
-            description: `The first personal site I made soon after I graduated. It featured fun animations and was artistic, but also a bit complicated.
-The second one is a simpler site with a consistent header on the left side. It improved upon the previous site in many ways:
-- The simpler look, while less artistic, was more robust and responsive to work on more devices.
-- The soft colors are easier on the eyes.
-- The header on the left has contact information and serves as a persistent call to action.`,
+            description: `I have made two versions of an online portfolio in the past.
+
+I made the first website soon after I graduated. It featured fun animations and was artistic, but also a bit complicated.
+
+The second one is a simpler site with a fixed header on the left side. It improved upon the previous site by being simpler, more responsive, and using the header as a persistent call to action.`,
             images: ["Portfolio2.png","Portfolio1.png"],
             thumbnail: "Portfolio12.png",
             platforms: ["web"],
