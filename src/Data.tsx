@@ -16,6 +16,8 @@ export const data = function(){
             oneline: "An interactive experience that blends mathematics and art",
             description: "This online garden transforms mathematical beauty into a fun and mesmerizing experience. Centered around the idea of exploration and play, the controls are designed to let curiosity guide the user to explore a variety of animated rose curves.",
             images: [
+                "RoseCurveBlueLoop.gif",
+                "RoseCurveGreenLoop.gif",
                 "RoseCurveStar.png",
                 "RoseCurveColor.png",
                 "RoseCurveGreen.png",
@@ -37,7 +39,7 @@ export const data = function(){
             - Having a single page without routing allows for everything to be visible at a glance. Details are hidden until the user decides to click on a project.
             - The portfolio is centered around larger images. This is more eye catching and reflects on the visual nature of much of my work.
             - The design is more modern and uses animations to gently guide the user.`,
-            images: ["Portfolio3.png",],
+            images: ["Portfolio3.png","Portfolio3Mobile.png"],
             thumbnail: "Portfolio3.png",
             platforms: ["web"],
             links: [{"title":"Source Code","link":"https://github.com/davetheknave/Web-Portfolio-03"}],
@@ -47,7 +49,12 @@ export const data = function(){
             year: "2021",
             oneline: "My and my sister's entry to AI and Games Jam 2021",
             description: `My sister and I had one week to create a video game for the AI and Games Jam of 2021 with the theme of "breaking the rules". We designed and created a puzzle game about an angel that can break the laws of physics. We won 7th place out of over 100 entries.`,
-            images: ["DivineLawScreenshot.png"],
+            images: [
+                "DivineLawScreenshot.png",
+                "DivineLaw1.gif",
+                "DivineLaw5.gif",
+                "DivineLaw7.gif",
+            ],
             thumbnail: "DivineLawTitle.png",
             platforms: ["windows","mac"],
             links: [{title:"Play now",link:"https://leafyline.itch.io/divine"}],

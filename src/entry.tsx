@@ -25,7 +25,7 @@ export function ImageEntry(props: any) {
     <div className="lg:w-5/12 lg:mb-20">
       {props.thumbnail ? (
         <img
-          className="h-full w-full object-cover mb-2 cursor-pointer"
+          className="h-full w-full object-contain mb-2 cursor-pointer"
           onClick={() => { props.onClick() }}
           src={props.thumbnail}
         />
