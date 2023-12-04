@@ -9,7 +9,6 @@ import { ErrorPage } from './ErrorPage.tsx'
 
 function App() {
   const [data] = useState(dataFetcher());
-  const [currentDataEntry, setCurrentDataEntry] = useState({});
   function getSlug(title: string) {
     return title.replace(/[^A-Za-z0-9_]/g, "-");
   }
@@ -27,7 +26,7 @@ function App() {
   routes.push({
     path: "/",
     element:
-      <div id="gallery" className={"lg:relative w-full top-32 flex flex-col 2xl:flex-row flex-wrap gap-16 justify-center" + ("description" in currentDataEntry ? " hidden" : "")}>
+      <div id="gallery" className={"lg:relative w-full top-32 flex flex-col 2xl:flex-row flex-wrap gap-16 justify-center"}>
         {data.map((d, i) => (
           <ImageEntry
             key={i}

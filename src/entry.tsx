@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export function HorizontalEntry(props: any) {
   return (
     <div
@@ -22,7 +24,7 @@ export function HorizontalEntry(props: any) {
 }
 export function ImageEntry(props: any) {
   return (
-    <a className="2xl:w-5/12 2xl:mb-20 no-underline hover:text-inherit" href={props.slug}>
+    <Link className="2xl:w-5/12 2xl:mb-20 no-underline hover:text-inherit" to={props.slug}>
       {props.thumbnail ? (
         <img
           className="w-full object-contain mb-2 cursor-pointer"
@@ -37,6 +39,6 @@ export function ImageEntry(props: any) {
         </h2>
         <p className="">{props.subtitle}</p>
       </div>
-    </a>
+    </Link>
   )
 }
