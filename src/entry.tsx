@@ -27,7 +27,8 @@ export function ImageEntry(props: any) {
         <img
           className="w-full object-contain mb-2 cursor-pointer"
           onClick={() => { props.onClick() }}
-          src={props.thumbnail}
+          src={props.thumbnail.path}
+          alt={props.thumbnail.alt ?? ""}
         />
       ) : null}
       <div className="flex flex-col justify-end">

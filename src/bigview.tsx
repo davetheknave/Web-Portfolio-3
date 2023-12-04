@@ -22,8 +22,8 @@ export function BigView(props: any) {
 
   const images = props.data.images !== undefined && props.data.images.length > 0 ? (
     <EmblaCarousel>
-      {props.data.images.map((image: string, i: number) =>
-        (<img key={i} src={image} className="object-scale-down"></img>)
+      {props.data.images.map((image: any, i: number) =>
+        (<img key={i} src={image.path} alt={image.alt ?? ""} className="object-scale-down"></img>)
       )}
     </EmblaCarousel>
   ) : "";
