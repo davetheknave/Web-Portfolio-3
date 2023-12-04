@@ -1,9 +1,10 @@
 import { useState } from 'react'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { data as dataFetcher } from './Data.tsx'
 import { ImageEntry } from './entry.tsx';
 import { BigView } from './bigview.tsx';
 import { Header } from './header.tsx';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ErrorPage } from './ErrorPage.tsx'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             </ImageEntry>
           ))}
         </div>,
+        errorElement: <ErrorPage />
     },
   ]);
   return (
