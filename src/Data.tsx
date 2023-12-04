@@ -38,7 +38,7 @@ Made using p5.js and React.`,
             oneline: "You're looking at it!",
             description: `My personal portfolio is designed to give a quick overview of some of the personal projects I've done, with more detailed information being available on GitHub or elsewhere. My latest website is similar to my previous one, but with a few notable improvements showcasing what I've learned:
 - The portfolio is centered around larger images. This is more eye catching and reflects on the visual nature of much of my work.
-- Having everything on a single page without routing allows for everything to be visible at a glance. Details are hidden until the user decides to click on a project.
+- Having everything on a single page allows for everything to be visible at a glance. Details are hidden until the user decides to click on a project.
 - The design is more stylish.`,
             images: [
                 {path: "Portfolio3.webp", alt: "My personal portfolio"},
