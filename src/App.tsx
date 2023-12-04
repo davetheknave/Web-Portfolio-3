@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import { data as dataFetcher } from './Data.tsx'
 import { ImageEntry } from './entry.tsx';
 import { BigView } from './bigview.tsx';
