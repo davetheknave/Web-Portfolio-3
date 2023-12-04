@@ -11,13 +11,13 @@ export function Header(props: any) {
         <p className="">Let's create something together.</p>
       </div>
       <div id="socials" className="font-bold flex flex-row gap-16 text-3xl items-center justify-center lg:flex-col">
-        <a className="w-0 mr-4" href="mailto:dave.j.stearns@gmail.com">
+        <a className="w-0 mr-4" aria-label="Send me an email" href="mailto:dave.j.stearns@gmail.com">
           <FontAwesomeIcon icon={email} />
         </a>
-        <a className="w-0 mr-4" href="http://linkedin.com/in/david-stearns-70727437">
+        <a className="w-0 mr-4" aria-label="See my LinkedIn" href="http://linkedin.com/in/david-stearns-70727437">
           <FontAwesomeIcon icon={linkedin} />
         </a>
-        <a className="w-0 mr-4" href="http://github.com/davetheknave">
+        <a className="w-0 mr-4" aria-label="Check out my GitHub" href="http://github.com/davetheknave">
           <FontAwesomeIcon icon={github} />
         </a>
       </div>
