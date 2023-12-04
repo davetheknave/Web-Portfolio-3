@@ -41,7 +41,7 @@ export function EmblaCarousel(props: any) {
         </div>
       </div>
       <div className="embla__buttons text-3xl bottom-0 h-full w-full max-w-3xl flex justify-between items-center mt-1">
-        <button className="embla__prev" onClick={scrollPrev}>
+        <button className="embla__prev" onClick={scrollPrev} aria-label="Previous Image">
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
         <div className="embla__dots flex justify-center gap-2">
@@ -53,10 +53,11 @@ export function EmblaCarousel(props: any) {
               className={'embla__dot'.concat(
                 index === selectedIndex ? ' embla__dot--selected' : ''
               )}
+              aria-label={"Go to image "+index}
             ><div className="dot-icon" /></button>
           ))}
         </div>
-        <button className="embla__next" onClick={scrollNext}>
+        <button className="embla__next" onClick={scrollNext} aria-label="Next Image">
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>
