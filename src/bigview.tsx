@@ -32,7 +32,6 @@ export function BigView(props: any) {
   return (
     <>
       <div className={"relative lg:top-12 flex flex-col justify-center items-center w-full mb-8" + props.className}>
-        <a onClick={props.back} className="underline underline-offset-4">Back</a>
         <div className="max-w-3xl">
           <h2 className="flex justify-between notext-2xl mb-4 w-full">
             <span>
@@ -50,9 +49,6 @@ export function BigView(props: any) {
           {links}
         </div>
           {images}
-        {/* <div className="absolute -bottom-36 flex justify-center w-full text-3xl mb-8">
-          <FontAwesomeIcon onClick={props.back} className="cursor-pointer" icon={faXmark} />
-        </div> */}
       </div>
     </>
   );

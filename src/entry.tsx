@@ -22,11 +22,10 @@ export function HorizontalEntry(props: any) {
 }
 export function ImageEntry(props: any) {
   return (
-    <div className="2xl:w-5/12 2xl:mb-20">
+    <a className="2xl:w-5/12 2xl:mb-20 no-underline hover:text-inherit" href={props.slug}>
       {props.thumbnail ? (
         <img
           className="w-full object-contain mb-2 cursor-pointer"
-          onClick={() => { props.onClick() }}
           src={props.thumbnail.path}
           alt={props.thumbnail.alt ?? ""}
         />
@@ -38,6 +37,6 @@ export function ImageEntry(props: any) {
         </h2>
         <p className="">{props.subtitle}</p>
       </div>
-    </div>
+    </a>
   )
 }
