@@ -18,8 +18,8 @@ export const data = function(){
 
 Made using p5.js and React.`,
             images: [
-                {path:"RoseCurveBlueLoop.gif", alt: "A spinning blue floral rose curve."},
-                {path:"RoseCurveGreenLoop.gif", alt: "A spinning spikey green rose curve"},
+                {path:"RoseCurveBlueLoop.webp", alt: "A spinning blue floral rose curve."},
+                {path:"RoseCurveGreenLoop.webp", alt: "A spinning spikey green rose curve"},
                 {path:"RoseCurveStar.webp", alt: "The rose curve visualizer producing a starry blue rose curve"},
                 {path:"RoseCurveColor.webp", alt: "The color-changing interface of the rose curve visualizer producing a grid-like orange rose curve"},
                 {path:"RoseCurveGreen.webp", alt: "The rose curve visualizer producing a flowery teal rose curve"},
@@ -55,9 +55,9 @@ Made using p5.js and React.`,
             description: `My sister and I had one week to create a video game for the AI and Games Jam of 2021 with the theme of "breaking the rules". We designed and created a puzzle game about an angel that can break the laws of physics. We won 7th place out of over 100 entries.`,
             images: [
                 {path: "DivineLawScreenshot.webp", alt: "Level 4 of Divine Law"},
-                {path: "DivineLaw1.gif", alt: "Level 1 of Divine Law being solved by stopping time"},
-                {path: "DivineLaw5.gif", alt: "Level 5 of Divine Law; the player blocks the snake from exiting by growing trees, and collects the key, but has blocked themselves from accessing the door"},
-                {path: "DivineLaw7.gif", alt: "Level 7 of Divine Law; the player uses their ability to go through walls and to move trees to block the snake's path"},
+                {path: "DivineLaw1.webp", alt: "Level 1 of Divine Law being solved by stopping time"},
+                {path: "DivineLaw5.webp", alt: "Level 5 of Divine Law; the player blocks the snake from exiting by growing trees, and collects the key, but has blocked themselves from accessing the door"},
+                {path: "DivineLaw7.webp", alt: "Level 7 of Divine Law; the player uses their ability to go through walls and to move trees to block the snake's path"},
             ],
             thumbnail: {path: "DivineLawTitle.webp", alt: "Divine Law"},
             platforms: ["windows","mac"],
