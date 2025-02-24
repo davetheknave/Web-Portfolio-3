@@ -27,7 +27,7 @@ export function ImageEntry(props: any) {
     <Link className="2xl:w-5/12 2xl:mb-20 no-underline hover:text-inherit" to={props.slug}>
       {props.thumbnail ? (
         <img
-          className="w-full object-contain mb-2 cursor-pointer"
+          className="max-h-96 w-full object-contain mb-2 cursor-pointer"
           src={props.thumbnail.path}
           alt={props.thumbnail.alt ?? ""}
         />
