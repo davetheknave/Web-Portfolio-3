@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn as linkedin, faGithub as github, faInstagram as instagram, faSoundcloud as soundcloud } from '@fortawesome/free-brands-svg-icons'
+// import { faLinkedinIn as linkedin, faGithub as github, faInstagram as instagram, faSoundcloud as soundcloud } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn as linkedin, faGithub as github} from '@fortawesome/free-brands-svg-icons'
 import { faAt as email } from '@fortawesome/free-solid-svg-icons'
 
 export function Header(props: any) {
