@@ -5,12 +5,13 @@ import { ImageEntry } from './entry.tsx';
 import { BigView } from './bigview.tsx';
 import { Header } from './header.tsx';
 import { ErrorPage } from './ErrorPage.tsx'
+import { AspirePrivacy } from './Aspire-Privacy.tsx';
 
 
 function App() {
   const [data] = useState(dataFetcher());
   function getSlug(title: string) {
-    return title.replace(/[^A-Za-z0-9_]/g, "-");
+    return title.replace(/[^A-Za-z0-9_]/g, "-").replace(/-+/g, "-");
   }
   const routes: any = data.map((d, i) => {
     return {
@@ -43,6 +44,11 @@ function App() {
           </ImageEntry>
         ))}
       </div>,
+    errorElement: <ErrorPage />
+  })
+  routes.push({
+    path: "/Aspire-To-The-Stars/privacy",
+    element : <AspirePrivacy />,
     errorElement: <ErrorPage />
   })
   const router = createBrowserRouter(routes);
