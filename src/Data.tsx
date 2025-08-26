@@ -14,24 +14,24 @@ export const data = function(){
             name: "Aspire: To The Stars",
             year: "2024",
             oneline: "A game about climbing an AI generated tower",
-            description: `A mobile game about climbing an AI generated tower. The tower is filled with enemies, weapons, and upgrades. The game features enemies and levels made with Stable Diffusion and Llama, which are created server-side and updated daily. The game is designed with frequent but short play sessions in mind.
+            description: `A mobile game about climbing an AI generated tower, designed with frequent but short play sessions in mind. The tower is filled with enemies, weapons, and upgrades. The game features enemies and levels made with Stable Diffusion and Llama, which are created server-side and updated daily.
 
 The game's server is hosted on AWS, and features a dashboard for managing the content. Stable Diffusion and Llama are used to generate the enemies and levels, which are uploaded to the server as a bundle of images and json data. The dashboard allows for generating content automatically, and for manually editing the content and regenerating specific images before publishing.
             
 Game made with C# in Unity. Server made with Python and AWS.`,
             images: [
-                {path:"Aspire-Battle-2-phone.webp", alt: "The main menu of Aspire: To The Stars"},
+                {path:"Aspire-Battle-2-phone.webp", alt: "A battle in Aspire: To The Stars"},
                 {path:"Aspire-Dashboard.webp", alt: "A browser dashboard for managing content on Aspire's servers. Several enemy images are visible, and a dialog menu for editing one enemy's data is open."},
-                {path:"Aspire-Battle-1-phone.webp", alt: "The main menu of Aspire: To The Stars"},
-                // {path:"Aspire-Battle-3-phone.webp", alt: "The main menu of Aspire: To The Stars"},
-                {path:"Aspire-Shop-phone.webp", alt: "The main menu of Aspire: To The Stars"},
-                {path:"Aspire-Inventory-phone.webp", alt: "The main menu of Aspire: To The Stars"},
+                {path:"Aspire-Battle-1-phone.webp", alt: "Aspire: To The Stars"},
+                // {path:"Aspire-Battle-3-phone.webp", alt: "Aspire: To The Stars"},
+                {path:"Aspire-Shop-phone.webp", alt: "A shop in Aspire: To The Stars"},
+                {path:"Aspire-Inventory-phone.webp", alt: "A menu showing weapon stats in Aspire: To The Stars"},
                 {path:"Aspire-Main-Menu-phone.webp", alt: "The main menu of Aspire: To The Stars"},
             ],
             thumbnail: {path:"Aspire-Main-Menu-phone.webp", alt: "The main menu of Aspire: To The Stars"},
             platforms: ["android"],
             links: [
-                // {title:"Download from Google Play", link:""},
+                {title:"Download from Google Play", link:"https://play.google.com/store/apps/details?id=xyz.stearns.aspire&pcampaignid=web_share"},
                 {title:"Privacy Policy", link:"/Aspire-To-The-Stars/privacy"},
             ],
         },
