@@ -31,7 +31,7 @@ export function BigView(props: any) {
 
   return (
     <>
-      <div className={"relative lg:top-12 flex flex-col justify-center items-center w-full mb-8" + props.className}>
+      <div className={"relative lg:top-12 flex flex-col justify-center items-center w-full mb-16" + props.className}>
         <div className="max-w-3xl">
           <h2 className="flex justify-between notext-2xl mb-4 w-full">
             <span>
