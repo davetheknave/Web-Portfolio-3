@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faLinkedinIn as linkedin, faGithub as github, faInstagram as instagram, faSoundcloud as soundcloud } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedinIn as linkedin, faGithub as github} from '@fortawesome/free-brands-svg-icons'
+// import { faLinkedinIn as linkedin, faGithub as github, faInstagram as instagram, faSoundcloud as soundcloud, faArtstation as artstation, faBandcamp as bandcamp } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn as linkedin, faGithub as github, faSoundcloud as soundcloud} from '@fortawesome/free-brands-svg-icons'
 import { faAt as email } from '@fortawesome/free-solid-svg-icons'
 
 export function Header(props: any) {
@@ -11,7 +11,7 @@ export function Header(props: any) {
         <p className="mb-8">{props.bio}</p>
         <p className="">Let's create something together.</p>
       </div>
-      <div id="socials" className="font-bold flex flex-row gap-16 text-3xl items-center justify-center lg:flex-col">
+      <div id="socials" className="font-bold flex flex-row gap-4 lg:gap-16 text-3xl items-center justify-center content-center flex-wrap">
         <a aria-label="Send me an email" href="mailto:david@stearns.xyz">
           <FontAwesomeIcon icon={email} />
         </a>
@@ -21,11 +21,17 @@ export function Header(props: any) {
         <a aria-label="Check out my GitHub" href="http://github.com/davetheknave" target="_blank">
           <FontAwesomeIcon icon={github} />
         </a>
-        {/* <a aria-label="Check out my Instagram" href="" target="_blank">
+        <a aria-label="Check out my Soundcloud" href="https://soundcloud.com/davidstearns-295079737" target="_blank">
+          <FontAwesomeIcon icon={soundcloud} />
+        </a>
+        {/* <a aria-label="Check out my Bandcamp" href="" target="_blank">
+          <FontAwesomeIcon icon={bandcamp} />
+        </a>
+        <a aria-label="Check out my Instagram" href="" target="_blank">
           <FontAwesomeIcon icon={instagram} />
         </a>
-        <a aria-label="Check out my Soundcloud" href="" target="_blank">
-          <FontAwesomeIcon icon={soundcloud} />
+        <a aria-label="Check out my ArtStation" href="" target="_blank">
+          <FontAwesomeIcon icon={artstation} />
         </a> */}
       </div>
     </header>
